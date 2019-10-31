@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    double numero;
+	    int x;
+	    
+        Scanner clasSe = new Scanner(System.in);
+		int N = clasSe.nextInt();
+		
+		for (x = 1;x <= N ;x++){
+		    if(x%2 == 0){
+		        //System.out.print("x^2 ="+ Math.pow(x,2));
+		        numero = Math.pow(x,2);
+		        System.out.printf("%d^2 = %f\n",x,numero);
+		    }
+		} 
+	}
+}
