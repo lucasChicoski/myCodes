@@ -1,0 +1,5 @@
+Ao realizar o login Portal Ehs e receber um 400 bad request, seguir as orientações abaixo
+
+# Entrar na pasta sharepoitportalapi/src/config 
+# Editar o arquivo mail.json
+# Atualizar as credenciais

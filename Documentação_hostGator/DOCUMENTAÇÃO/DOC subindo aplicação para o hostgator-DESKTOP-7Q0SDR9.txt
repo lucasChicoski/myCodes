@@ -1,0 +1,67 @@
+pm2 monit -- abre o monitoramento de serviços
+
+-------------Terminar um processo-------
+
+pm2 stop <processo>
+pm2 delete <processo>
+
+-------------Subir processo Front--------
+
+pm2 serve ./build 60006 --spa --name portalFront
+
+portalfrontteste	
+portalbackteste
+
+portalBack
+portalFront
+
+------------Subir Back end ---------------
+Caso for projeto react
+
+#instalar as dependencias
+npm i (instala as dependencias)
+npx tsc (gera a pasta dist)
+pm2 start (*.js) --name <node do processo>
+
+OBS: caso não for uma api em react executar apenas o ultimo comando
+
+
+-------------------------instalando o yarn no servidor hostgator-------------------------
+
+https://linuxize.com/post/how-to-install-yarn-on-centos-7/
+
+
+--------------------------htaccess-------------------------------------------------------
+Criar um arquivo dentro do domínio que foi criado com o nome .htaccess contendo o seguninte conteúdo
+
+RewriteEngine On
+RewriteRule ^$ http://127.0.0.1:xxxx/ [P,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ http://127.0.0.1:xxxx/$1 [P,L]
+DirectoryIndex disabled
+
+-----------------------------portas usadas-----------------------------------------------
+
+porta 60005 ---------- Backend (oficial)
+porta 60006 ---------- Frontend (oficial)
+
+porta 60007 ----------- Backend (ambiente de teste)
+porta 60008 ----------- Frontend (ambiente de teste)
+
+Obs. favor add as portas que estão em uso
+Obs. usar as portas entre 60.000 e 65.535
+
+--------------------------Pastas da aplicação----------------------------------------------
+Todas as aplicações subir para a pasta Apps Criando uma pasta do projeto geral e subdividindo como foi feito em performance social
+Não colocar as aplicações dentro da pasta public_html --- nome da pasta criado no domínio assim mantendo a organização
+
+
+--------------------------Endereços-------------
+--teste--
+performancesocialtesteback.directy.com.br
+performancesocialtestefront.directy.com.br
+
+--official
+performancesocialbackend.directy.com.br
+performancesocial.directy.com.br 
